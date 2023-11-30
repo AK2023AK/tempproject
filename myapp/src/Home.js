@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './index.css'
+import Hoc from './Hoc'
 
-const Home = () => {
+const Home = (props) => {
   const name = 'john'
+  console.log(props.value)
   return (
     <>
     <center>
@@ -16,4 +18,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Hoc(Home)

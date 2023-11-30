@@ -5,6 +5,7 @@ import Home from './Home';
 import Dashboard from './Dashboard';
 import About from './About';
 import Pagenotfound from './Pagenotfound';
+import Fetch from './Fetch'
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path ='*' element={<Pagenotfound />}/>
       </Routes>
     </BrowserRouter>
+    <Fetch />
     </>
   );
 }
