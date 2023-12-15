@@ -4,14 +4,15 @@ import './index.css'
 import Hoc from './Hoc'
 
 const Home = (props) => {
-  const name = 'john'
+  const name='John'
+  console.log(props)
   console.log(props.value)
   return (
     <>
     <center>
         <h1>Welcome to home page</h1>
-        <Link to= {`/dashboard/${name}`} className='Link'>Dashboard</Link>{'  '}
-        <Link to= {`/about?name=${'Krishna'}&age=${25}`} className='Link'>About</Link>
+        <Link to = {`/dashboard/${name}`} className='Link'>Dashboard</Link>{'  '}
+        <Link to= {`/about?name=${name}&age=${25}`} className='Link'>About</Link>
     </center>
     
     </>

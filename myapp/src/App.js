@@ -6,19 +6,42 @@ import Dashboard from './Dashboard';
 import About from './About';
 import Pagenotfound from './Pagenotfound';
 import Fetch from './Fetch'
+import Firebase from './Firebase';
+import Create from './Create';
+import Edit from './Edit';
+import Count from './Count';
+import Display from './Display';
+import { createContext,useState } from 'react';
+export const store = createContext()
 function App() {
+  const [data,setData] = useState([
+    {brandname:'Realme'},
+    {brandname:'Redmi'},
+    {brandname:'Nokia'}]
+    )
   return (
+    <store.Provider value={[data,setData]}>
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/dashboard/:user' element={<Dashboard />} />
         <Route path='/about' element={<About />} />
         <Route path ='*' element={<Pagenotfound />}/>
       </Routes>
-    </BrowserRouter>
-    <Fetch />
+    </BrowserRouter> */}
+    {/* <Fetch /> */}
+    {/* <Firebase/> */}
+    {/* <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Create />}/>
+        <Route path='/edit' element={<Edit />}/>
+      </Routes>
+    </BrowserRouter>      */}
+    <Count />
+    <Display/>
     </>
+    </store.Provider>
   );
 }
 
